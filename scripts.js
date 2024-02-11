@@ -9,4 +9,4 @@ tipCalculator = function(total, tipRate) {
 //Now execute the function, passing a total of $50 and rate of 20%
 tipCalculator(100, 0.2);
 
-
+tipCalculator(total, tipRate);
