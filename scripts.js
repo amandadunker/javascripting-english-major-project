@@ -1,12 +1,23 @@
-let tipCalculator;
-tipCalculator = function(total, tipRate) {
-    //Calculate the percentage of the total as a variable "tipAmount"
-    let tipAmount;
-    tipAmount = tipRate * total;
-    //Change #response to tell us the tip amount
-    $("#response").html("Your tip is $" + tipAmount);
+let myHabaneroSauceSquirts, myBurritoObject;
+
+//Define and assign a variable for spiciness.
+myHabaneroSauceSquirts = 3;
+
+//Assign the burrito object
+myBurritoObject = {
+tortilla:"wheat",
+guacamole: true,
+beans: "pinto",
+habaneroSauceSquirts: myHabaneroSauceSquirts,
+spiciness: function() {
+    if (myHabaneroSauceSquirts > 0 ) {
+        alert("This is a spicy burrito!");
+    } else {
+        alert("This is a mild burrito.");
+    }
+}
+
 };
-//Now execute the function, passing a total of $50 and rate of 20%
-tipCalculator(100, 0.2);
-
-
+$("#response").html("Your burrito has " +
+myBurritoObject.habaneroSauceSquirts + " squirts of habanero.");
+myBurritoObject.spiciness();
