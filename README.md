@@ -1,4 +1,4 @@
-#Week 4: Functions
+# Week 4: Functions
 // creates a comment, /* turns an entire section into a comment
 parameters go inside parentheses
 prompt is a function, its parameters are inside parentheses:
