@@ -1,12 +1,17 @@
+let total;
+total = prompt("What the total?");
+
+let tipRate;
+tipRate = prompt("How much do you want to tip?");
+
 let tipCalculator;
-tipCalculator = function(total, tipRate) {
-    //Calculate the percentage of the total as a variable "tipAmount"
+tipCalculator = function(total, tipRate) 
+{
     let tipAmount;
-    tipAmount = tipRate * total;
-    //Change #response to tell us the tip amount
-    $("#response").html("Your tip is $" + tipAmount);
-};
-//Now execute the function, passing a total of $50 and rate of 20%
-tipCalculator(100, 0.2);
+    if(tipRate < 1) {tipAmount = tipRate * total;}
+        else{tipAmount = tipRate * .01 * total;}
+
+        $("#response").html("Your tip is $" + tipAmount);
+    };
 
 
