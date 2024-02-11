@@ -1,12 +1,17 @@
-let tipCalculator;
-tipCalculator = function(total, tipRate) {
-    //Calculate the percentage of the total as a variable "tipAmount"
-    let tipAmount;
-    tipAmount = tipRate * total;
-    //Change #response to tell us the tip amount
-    $("#response").html("Your tip is $" + tipAmount);
-};
-//Now execute the function, passing a total of $50 and rate of 20%
-tipCalculator(100, 0.2);
+let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
+donatello = {name: "Donatello", color: "purple", weapon: "bo"};
+raphael = {name: "Raphael", color: "red", weapon: "sai"};
+michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
+turtles = [leonardo, donatello, raphael, michelangelo];
 
-tipCalculator(total, tipRate);
+let names, namesWithO;
+names = turtles.map(function(turtle){
+    return turtle.name;
+}).sort();
+namesWithO = names.filter(function(name){
+    return name.includes("o");
+}).join(", ");
+$("#response").html(namesWithO);
+
+
