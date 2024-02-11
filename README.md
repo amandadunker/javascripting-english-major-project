@@ -1,15 +1,48 @@
-# Day 1 of being a JavaScripting English Major (2/9/2024)
+# Week 5: Arrays
+Collections of data surrounded by brackets
 
-Tasks: Forked the respository and cloned it in VSCode because Atom is dead. In VSCode, command palette is in the view menu. Click it and search for "Git: Clone." 
+let arrayOfStrings, arrayOfNumbers, arrayMixed;
+arrayOfStrings = ["a", "b", "c"];
+arrayOfNumbers = [1, 2, 3];
+arrayMixed = ["a", 1, null, true, arrayOfNumbers, [4.5, 5.6]];
 
-Also using David Flanagan's "Javascript: The Definitive Guide" 7th edition.
+//$("#response").html(arrayOfStrings[0]);
+//calling for 0 prints "a", calling for 2 prints "c" because the index starts with 0
+//objects are surrounded by curly brackets. Arrays have indexes while objects have properties.
+//use dot notation to access properties of objects
+//arrays also have properties that you don't have to specify, like length (everything is really an object in javascript)
 
-Notes: "null" is an object that indicates the lack of information, such as an unanswered question on a survey. "undefined" is different: it means information not yet given.
+When you use a function as a property, the properties are called methods.
 
-declaring variables: define them at the top. "const" is for permanently assigning a value. You can declare using let without immediately assigning a value (without initializing the constant). Some people only use const for things like pi or version numbers that truly never change. A declaration that appears outside of any code blocks is a global variable or constant; it's scope is the file or html document it is contained within.
 
-numbers, strings, and Boolean truth values are primitive types; there are also symbols, null, or undefined; everything else is an object type
-objects are collections of properties (named values)
+let turtles, sortedTurtles, reversedTurtles, turtleNames;
+turtles = ["Leonardo", "Donatello", "Raphael", "Michelangelo"];
+sortedTurtles = turtles.sort();
+//abc order
+reversedTurtles = turtles.reverse();
+//reverse abc order?
+turtleNames = turtles.join(" ");
+//lists all as one item
+turtles.push("Splinter");
+//adds Splinter to the array
+turtles.pop();
+//returns the original 
 
-arrays are ordered collections of numbered values
-Commands: /n starts a new line, typeof gives the type of a variable, 
+let string, firstLetter, stringLength;
+string = "This is a string.";
+
+//Strings have indices and lengths, just like arrays: 
+firstLetter = string[0];
+//prints T
+
+stringLength = string.length;
+//stringLength is 17
+
+//Strings also have methods just like arrays:
+
+let upperCaseString, replacedString;
+upperCaseString = string.toUpperCase();
+//prints upperCaseString as THIS IS A STRING
+
+replacedString = string.replace("string", "pipe");
+replacedString prints "This is a pipe."
