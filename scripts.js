@@ -14,4 +14,5 @@ tipCalculator = function(total, tipRate)
         $("#response").html("Your tip is $" + tipAmount);
     };
 
+tipCalculator(total, tipRate);
 
